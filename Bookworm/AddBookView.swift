@@ -19,7 +19,7 @@ struct AddBookView: View {
     @State var review = ""
     
     var inputValidation: Bool {
-        return !title.isEmpty && !author.isEmpty && !review.isEmpty
+        return !title.trimmingCharacters(in: .whitespaces).isEmpty && !author.trimmingCharacters(in: .whitespaces).isEmpty && !review.trimmingCharacters(in: .whitespaces).isEmpty
     }
 
     let genres = ["Fantasy", "Horror", "Kids", "Mystery", "Poetry", "Romance", "Thriller"]
@@ -38,9 +38,13 @@ struct AddBookView: View {
                 } header: {
                     Text("Book information")
                 }
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled(true)
+                
                 Section {
                     RatingView(label: "rating", rating: $rating)
                     TextField("comment", text: $review)
+                        .textInputAutocapitalization(.never)
                 } header: {
                     Text("write a review")
                 }
@@ -59,6 +63,9 @@ struct AddBookView: View {
                         book.review = review
                         
                         try? moc.save()
+                        
+                        // dismissing when add process is finshed
+                        dismiss()
                     }
                     .disabled(!inputValidation)
                 }

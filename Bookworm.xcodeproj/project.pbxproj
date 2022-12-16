@@ -15,6 +15,10 @@
 		9B1598E92946DEB7000D6FD5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1598E82946DEB7000D6FD5 /* DataController.swift */; };
 		9B3DD9442948367F0092698C /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3DD9432948367F0092698C /* AddBookView.swift */; };
 		9B3DD94629484E920092698C /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3DD94529484E920092698C /* RatingView.swift */; };
+		9B3DD948294859670092698C /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3DD947294859670092698C /* EmojiRatingView.swift */; };
+		9B3DD94A294876850092698C /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3DD949294876850092698C /* BookDetailView.swift */; };
+		9BF35218294C2144000235B0 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF35217294C2144000235B0 /* test.swift */; };
+		9BF3521A294C27AC000235B0 /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF35219294C27AC000235B0 /* BookRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		9B1598E82946DEB7000D6FD5 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		9B3DD9432948367F0092698C /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		9B3DD94529484E920092698C /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		9B3DD947294859670092698C /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
+		9B3DD949294876850092698C /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
+		9BF35217294C2144000235B0 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		9BF35219294C27AC000235B0 /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,9 @@
 				9B1598EA2946DEBC000D6FD5 /* DataModel */,
 				9B1598D62946CB01000D6FD5 /* BookwormApp.swift */,
 				9B1598D82946CB01000D6FD5 /* ContentView.swift */,
+				9BF35219294C27AC000235B0 /* BookRow.swift */,
+				9B3DD949294876850092698C /* BookDetailView.swift */,
+				9B3DD947294859670092698C /* EmojiRatingView.swift */,
 				9B3DD9432948367F0092698C /* AddBookView.swift */,
 				9B3DD94529484E920092698C /* RatingView.swift */,
 				9B1598E82946DEB7000D6FD5 /* DataController.swift */,
@@ -85,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				9B1598E52946D3CE000D6FD5 /* Bookworm.xcdatamodeld */,
+				9BF35217294C2144000235B0 /* test.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -159,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3DD94A294876850092698C /* BookDetailView.swift in Sources */,
+				9BF3521A294C27AC000235B0 /* BookRow.swift in Sources */,
 				9B1598D92946CB01000D6FD5 /* ContentView.swift in Sources */,
 				9B1598E92946DEB7000D6FD5 /* DataController.swift in Sources */,
+				9B3DD948294859670092698C /* EmojiRatingView.swift in Sources */,
+				9BF35218294C2144000235B0 /* test.swift in Sources */,
 				9B1598E72946D3CE000D6FD5 /* Bookworm.xcdatamodeld in Sources */,
 				9B3DD94629484E920092698C /* RatingView.swift in Sources */,
 				9B1598D72946CB01000D6FD5 /* BookwormApp.swift in Sources */,

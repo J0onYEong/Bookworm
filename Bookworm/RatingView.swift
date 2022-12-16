@@ -28,16 +28,18 @@ struct RatingView: View {
             // label
             if !label.isEmpty {
                 Text(label)
-                Rectangle()
-                    .frame(width: 1, height: .infinity)
-                    .foregroundColor(.gray)
-                    .padding([.top, .bottom])
-            }
+                GeometryReader { geo in
+                    LinearGradient(colors: [.gray.opacity(0), .gray, .gray.opacity(0)], startPoint: .top, endPoint: .bottom)
+                        .frame(width: 1)
+                        .padding([.top, .bottom], 5)
+                        .position(x: geo.size.width/2, y: geo.size.height/2)
+                }
+                .frame(width: 1)            }
             //
             ForEach(1..<6) { number in
                 image(number: number)
                     .onTapGesture {
-                        withAnimation {
+                        withAnimation(.easeInOut(duration: 0.175)) {
                             if rating == number {
                                 rating = 0
                                 return
@@ -52,6 +54,13 @@ struct RatingView: View {
 
 struct RatingView_Previews: PreviewProvider {
     static var previews: some View {
-        RatingView(label: "test label", rating: .constant(4))
+        NavigationView {
+            Form {
+                Section {
+                    RatingView(label: "test label", rating: .constant(4))
+                        .frame(height: 100)
+                }
+            }
+        }
     }
 }
