@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct BookDetailView: View {
     var book: Book
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
     @State private var showingAlert = false
+    
+    var dateText: Text {
+        if let date = book.date {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let dateString = dateFormatter.string(from: date)
+            return Text(dateString)
+        }
+        return Text("no data")
+    }
     
     var body: some View {
         ScrollView {
@@ -35,6 +46,10 @@ struct BookDetailView: View {
                         Text(book.review ?? "Empty comment")
                             .font(.caption)
                     }
+                    dateText
+                        .font(.caption2)
+                        .foregroundColor(.gray)
+                        .opacity(0.7)
                 }
                 .padding(.leading)
                 Spacer()
