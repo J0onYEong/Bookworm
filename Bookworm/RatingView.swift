@@ -49,6 +49,23 @@ struct RatingView: View {
                     }
             }
         }
+        .accessibilityElement()
+        .accessibilityLabel(label)
+        .accessibilityValue(rating == 1 ? "1 star" : "\(rating) stars")
+        .accessibilityAdjustableAction { direction in
+            switch direction {
+            case .increment:
+                if rating < 5 {
+                    rating += 1
+                }
+            case .decrement:
+                if rating > 0 {
+                    rating -= 1
+                }
+            default:
+                break
+            }
+        }
     }
 }
 
